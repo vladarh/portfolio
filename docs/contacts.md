@@ -1,6 +1,6 @@
 # Контакты
 
 - **Email**: [vladarh11v@gmail.com](mailto:vladarh11v@gmail.com)
-- **GitHub**: [github.com/yourusername](https://github.com/yourusername)
-- **Telegram**: [@yourusername](https://t.me/yourusername)
-- **GitLab**: [gitlab.com/yourusername](https://gitlab.com/yourusername)
+- **GitHub**: [github.com/vladarh](https://github.com/vladarh)
+- **Telegram**: [@vladarh](https://t.me/vladarh)
+- **GitLab**: [gitlab.com/vladarh](https://gitlab.com/vladarh)
