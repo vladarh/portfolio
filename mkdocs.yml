@@ -1,0 +1,51 @@
+site_name: Владислав Рубцов — Портфолио
+site_url: https://example.com
+site_description: DevSecOps/DevOps инженер и full-stack разработчик
+repo_url: https://gitlab.com/yourusername/portfolio
+repo_name: GitLab
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - scheme: default
+      primary: blue
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Тёмная тема
+    - scheme: slate
+      primary: blue
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Светлая тема
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: ru
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+
+nav:
+  - Главная: index.md
+  - Кейсы:
+      - cases/compliance-automation.md
+      - cases/helm-migration.md
+  - Чертежи:
+      - blueprints/gitlab-ci-templates.md
+  - Контакты: contacts.md

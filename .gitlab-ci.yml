@@ -1,0 +1,49 @@
+stages: [build, deploy]
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  NODE_ENV: "production"
+
+cache:
+  paths:
+    - .cache/pip
+    - apps/landing/node_modules/
+
+build:docs:
+  stage: build
+  image: python:3.11
+  script:
+    - pip install -r requirements.txt
+    - mkdocs build --strict
+  artifacts:
+    paths:
+      - site/
+    expire_in: 1 week
+
+build:landing:
+  stage: build
+  image: node:20-alpine
+  before_script:
+    - cd apps/landing
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - apps/landing/dist/
+    expire_in: 1 week
+
+pages:
+  stage: deploy
+  image: alpine:3.19
+  needs: ["build:docs", "build:landing"]
+  script:
+    - mkdir -p public
+    - cp -r apps/landing/dist/* public/
+    - mkdir -p public/docs
+    - cp -r site/* public/docs/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
