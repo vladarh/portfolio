@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Владислав Рубцов | DevSecOps Engineer</title>
     <meta name="description" content="DevSecOps Engineer, специалист по автоматизации безопасности, контейнерной безопасности и CI/CD пайплайнам">
+    <meta name="theme-color" content="#3b82f6">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button onclick="switchLanguage('ru')" class="lang-btn active" id="lang-ru">RU</button>
-        <button onclick="switchLanguage('en')" class="lang-btn" id="lang-en">EN</button>
+    <div class="language-switcher" aria-label="Language switcher">
+        <button onclick="switchLanguage('ru')" class="lang-btn active" id="lang-ru" aria-pressed="true">RU</button>
+        <button onclick="switchLanguage('en')" class="lang-btn" id="lang-en" aria-pressed="false">EN</button>
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main">
         <div class="container">
             <div class="nav-brand">
-                <span class="logo">ВР</span>
+                <span class="logo" aria-label="Логотип ВР">ВР</span>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link" data-ru="Главная" data-en="Home">Главная</a></li>
@@ -31,11 +32,11 @@
                 <li><a href="#projects" class="nav-link" data-ru="Проекты" data-en="Projects">Проекты</a></li>
                 <li><a href="#contact" class="nav-link" data-ru="Контакты" data-en="Contact">Контакты</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -46,38 +47,70 @@
                 <h1 class="hero-title">
                     <span data-ru="Владислав Рубцов" data-en="Vladislav Rubtsov">Владислав Рубцов</span>
                 </h1>
-                <h2 class="hero-subtitle gradient-text" data-ru="DevSecOps Engineer & Специалист по Автоматизации Безопасности" data-en="DevSecOps Engineer & Security Automation Specialist">
-                    DevSecOps Engineer & Специалист по Автоматизации Безопасности
+
+                <h2 class="hero-subtitle gradient-text"
+                    data-ru="DevSecOps / DevOps инженер · Full‑Stack разработчик"
+                    data-en="DevSecOps / DevOps Engineer · Full‑Stack Developer">
+                    DevSecOps / DevOps инженер · Full‑Stack разработчик
                 </h2>
-                <p class="hero-description" data-ru="Full-stack веб-разработчик с 3 годами официального опыта и 6+ годами личной практики. Специализируюсь на DevSecOps, DevOps, CI/CD и автоматизации процессов безопасности. Создаю production-ready решения от идеи до деплоя." data-en="Full-stack web developer with 3 years of official experience and 6+ years of personal practice. Specializing in DevSecOps, DevOps, CI/CD and security process automation. Building production-ready solutions from idea to deployment.">
-                    Full-stack веб-разработчик с 3 годами официального опыта и 6+ годами личной практики. Специализируюсь на DevSecOps, DevOps, CI/CD и автоматизации процессов безопасности. Создаю production-ready решения от идеи до деплоя.
+
+                <p class="hero-description"
+                    data-ru="Делаю выпуск продукта быстрее и безопаснее: CI/CD в GitLab CI, автоматизация инфраструктуры в Ansible, DevSecOps‑практики (SAST/DAST, секреты, зависимости). Бэкенд — FastAPI, Django. Фронтенд — Vue 3 + Vite. UI — Tailwind, Bootstrap."
+                    data-en="I help teams ship faster and safer: CI/CD on GitLab CI, infrastructure automation with Ansible, DevSecOps practices (SAST/DAST, secrets, dependencies). Backend — FastAPI, Django. Frontend — Vue 3 + Vite. UI — Tailwind, Bootstrap.">
+                    Делаю выпуск продукта быстрее и безопаснее: CI/CD в GitLab CI, автоматизация инфраструктуры в Ansible, DevSecOps‑практики (SAST/DAST, секреты, зависимости). Бэкенд — FastAPI, Django. Фронтенд — Vue 3 + Vite. UI — Tailwind, Bootstrap.
                 </p>
+
                 <div class="hero-stats">
-                    <div class="stat-item">
+                    <div class="stat-card">
                         <div class="stat-number">3+</div>
-                        <div class="stat-label" data-ru="года официального опыта" data-en="years official experience">года официального опыта</div>
+                        <div class="stat-label" data-ru="года коммерческого опыта" data-en="years professional experience">года коммерческого опыта</div>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-card">
                         <div class="stat-number">6+</div>
                         <div class="stat-label" data-ru="лет практики в ИБ" data-en="years in InfoSec">лет практики в ИБ</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">Full-stack</div>
-                        <div class="stat-label" data-ru="разработка" data-en="development">разработка</div>
+                </div>
+
+                <div class="hero-stack">
+                    <div class="stack-group">
+                        <div class="stack-title" data-ru="DevSecOps / DevOps" data-en="DevSecOps / DevOps">DevSecOps / DevOps</div>
+                        <div class="stack-tags">
+                            <span class="skill-tag">Ansible</span>
+                            <span class="skill-tag">GitLab CI</span>
+                            <span class="skill-tag">CI/CD</span>
+                        </div>
+                    </div>
+                    <div class="stack-group">
+                        <div class="stack-title" data-ru="Backend" data-en="Backend">Backend</div>
+                        <div class="stack-tags">
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Django</span>
+                        </div>
+                    </div>
+                    <div class="stack-group">
+                        <div class="stack-title" data-ru="Frontend / UI" data-en="Frontend / UI">Frontend / UI</div>
+                        <div class="stack-tags">
+                            <span class="skill-tag">Vue 3</span>
+                            <span class="skill-tag">Vite</span>
+                            <span class="skill-tag">Tailwind</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
                     </div>
                 </div>
+
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary" data-ru="Посмотреть проекты" data-en="View Projects">Посмотреть проекты</a>
                     <a href="#contact" class="btn btn-secondary" data-ru="Связаться" data-en="Get in Touch">Связаться</a>
                 </div>
-                <div class="social-links">
+
+                <div class="social-links" aria-label="Social links">
                     <a href="mailto:vladarh11v@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://t.me/yourusername" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
+        <div class="scroll-indicator" aria-hidden="true">
             <div class="mouse"></div>
         </div>
     </section>
@@ -127,7 +160,6 @@
     <section id="journey" class="journey">
         <div class="container">
             <h2 class="section-title" data-ru="Мой путь в информационной безопасности" data-en="My Journey in Information Security">Мой путь в информационной безопасности</h2>
-            
             <div class="journey-intro">
                 <p data-ru="Увлечение информационной безопасностью началось ещё в школе и переросло в глубокую экспертизу во всех аспектах offensive и defensive security." data-en="My passion for information security started in school and grew into deep expertise in all aspects of offensive and defensive security.">
                     Увлечение информационной безопасностью началось ещё в школе и переросло в глубокую экспертизу во всех аспектах offensive и defensive security.
@@ -398,7 +430,7 @@
                             <li><strong>Разработал Ansible playbooks</strong> для автоматической оценки Linux (Astra 16/17, CentOS, PostgreSQL, MySQL) и Windows Server с использованием bash/PowerShell/WIN API</li>
                             <li><strong>Создал структурированную систему playbooks</strong> с параметризованными проверками, автогенерацией Excel отчётов и экспортом конфигураций</li>
                             <li><strong>Реализовал Ansible CI/CD</strong> для непрерывной интеграции и поставки 8 компонентов решения</li>
-                            <li><strong>Функционал:</strong> управление проектами, конфигурация серверов, выбор проверок, исполнение по расписанию, сравнение результатов, управление командой</li>
+                            <li><strong>Функционал:</strong> управление проектами, конфигурация серверов, выбор проверок, исполнение по расписанию, сравнение результатов, управление командой</strong></li>
                         </ul>
 
                         <div class="achievement-badge conference">
@@ -448,7 +480,7 @@
                             <li><strong>Подготовил профессиональный отчёт</strong> с детальным описанием находок, векторов атак и рекомендаций</li>
                             <li><strong>Получил рекомендательное письмо</strong> от компании</li>
                         </ul>
-                        <a href="https://drive.google.com/file/d/19bxMk8DdMFZdWRuo42ZJa9wviBycy2TC/view?usp=sharing" target="_blank" class="recommendation-link">
+                        <a href="https://drive.google.com/file/d/19bxMk8DdMFZdWRuo42ЗJa9wviBycy2TC/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="recommendation-link">
                             <i class="fas fa-file-pdf"></i>
                             <span data-ru="Посмотреть рекомендательное письмо" data-en="View Recommendation Letter">Посмотреть рекомендательное письмо</span>
                         </a>
@@ -462,17 +494,15 @@
     <section id="challenges" class="challenges">
         <div class="container">
             <h2 class="section-title" data-ru="Решённые проблемы и вызовы" data-en="Solved Challenges & Problems">Решённые проблемы и вызовы</h2>
-            
             <div class="challenges-grid">
-                <!-- Challenge cards remain the same from previous version -->
                 <!-- Challenge 1 -->
                 <div class="challenge-card">
                     <div class="challenge-icon">
                         <i class="fas fa-hourglass-end"></i>
                     </div>
-                    <h3>Проблема: 300+ часов на оценку соответствия</h3>
+                    <h3 data-ru="Проблема: 300+ часов на оценку соответствия" data-en="Problem: 300+ hours per compliance assessment">Проблема: 300+ часов на оценку соответствия</h3>
                     <div class="challenge-problem">
-                        <h4>Что было:</h4>
+                        <h4 data-ru="Что было:" data-en="Before:">Что было:</h4>
                         <ul>
                             <li>Команде из 6 человек требовалось 300+ часов на одну оценку</li>
                             <li>Ручной анализ документации - 80 часов</li>
@@ -481,7 +511,7 @@
                         </ul>
                     </div>
                     <div class="challenge-solution">
-                        <h4>Решение:</h4>
+                        <h4 data-ru="Решение:" data-en="Solution:">Решение:</h4>
                         <ul>
                             <li><strong>Разработал полнофункциональную платформу</strong> с Django + Vue.js + Ansible</li>
                             <li><strong>ML конвейеры</strong> для автоматической генерации ПиМИ (-40 часов)</li>
@@ -503,9 +533,9 @@
                     <div class="challenge-icon">
                         <i class="fas fa-puzzle-piece"></i>
                     </div>
-                    <h3>Проблема: Миграция Helm-чартов между контурами</h3>
+                    <h3 data-ru="Проблема: Миграция Helm-чартов между контурами" data-en="Problem: Migrating Helm charts across environments">Проблема: Миграция Helm-чартов между контурами</h3>
                     <div class="challenge-problem">
-                        <h4>Что было:</h4>
+                        <h4 data-ru="Что было:" data-en="Before:">Что было:</h4>
                         <ul>
                             <li>Ручная миграция чартов занимала часы</li>
                             <li>Несовместимость форматов между системами</li>
@@ -514,7 +544,7 @@
                         </ul>
                     </div>
                     <div class="challenge-solution">
-                        <h4>Решение:</h4>
+                        <h4 data-ru="Решение:" data-en="Solution:">Решение:</h4>
                         <ul>
                             <li><strong>Разработал GitLab CI/CD компонент</strong> для автоматической миграции</li>
                             <li><strong>Модифицировал исходный код Captain-chartMuseum</strong>: добавил API endpoint</li>
@@ -536,9 +566,9 @@
                     <div class="challenge-icon">
                         <i class="fas fa-ban"></i>
                     </div>
-                    <h3>Проблема: CI/CD только для существующей инфраструктуры</h3>
+                    <h3 data-ru="Проблема: CI/CD только для существующей инфраструктуры" data-en="Problem: CI/CD only for pre-provisioned infra">Проблема: CI/CD только для существующей инфраструктуры</h3>
                     <div class="challenge-problem">
-                        <h4>Что было:</h4>
+                        <h4 data-ru="Что было:" data-en="Before:">Что было:</h4>
                         <ul>
                             <li>Ansible playbooks работали только с уже развернутой инфраструктурой</li>
                             <li>Невозможность быстрого деплоя stage окружения</li>
@@ -546,7 +576,7 @@
                         </ul>
                     </div>
                     <div class="challenge-solution">
-                        <h4>Решение:</h4>
+                        <h4 data-ru="Решение:" data-en="Solution:">Решение:</h4>
                         <ul>
                             <li><strong>Переписал Ansible playbooks</strong> для универсального деплоя с нуля</li>
                             <li><strong>Добавил поддержку</strong> как prod, так и stage окружений</li>
@@ -567,9 +597,9 @@
                     <div class="challenge-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Проблема: Выбор контейнерной безопасности для ЕЦПК</h3>
+                    <h3 data-ru="Проблема: Выбор контейнерной безопасности для ЕЦПК" data-en="Problem: Picking container security for UCDC">Проблема: Выбор контейнерной безопасности для ЕЦПК</h3>
                     <div class="challenge-problem">
-                        <h4>Что было:</h4>
+                        <h4 data-ru="Что было:" data-en="Before:">Что было:</h4>
                         <ul>
                             <li>Нужно было выбрать между Luntry и NeuVector</li>
                             <li>Недостаточно данных для принятия решения</li>
@@ -577,7 +607,7 @@
                         </ul>
                     </div>
                     <div class="challenge-solution">
-                        <h4>Решение:</h4>
+                        <h4 data-ру="Решение:" data-en="Solution:">Решение:</h4>
                         <ul>
                             <li><strong>Провёл развёртывание обоих решений</strong> на тестовых кластерах</li>
                             <li><strong>Сравнительный анализ</strong>: detection rate, false positives, performance impact</li>
@@ -598,9 +628,9 @@
                     <div class="challenge-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3>Проблема: Отсутствие системы бэкапа кода</h3>
+                    <h3 data-ru="Проблема: Отсутствие системы бэкапа кода" data-en="Problem: No code backup system">Проблема: Отсутствие системы бэкапа кода</h3>
                     <div class="challenge-problem">
-                        <h4>Что было:</h4>
+                        <h4 data-ru="Что было:" data-en="Before:">Что было:</h4>
                         <ul>
                             <li>Единственная точка отказа - внешний Git сервис</li>
                             <li>Нет локального бэкапа исходного кода</li>
@@ -608,7 +638,7 @@
                         </ul>
                     </div>
                     <div class="challenge-solution">
-                        <h4>Решение:</h4>
+                        <h4 data-ru="Решение:" data-en="Solution:">Решение:</h4>
                         <ul>
                             <li><strong>Развернул Forgejo на Windows Server</strong> с помощью WSL</li>
                             <li><strong>Настроил автоматическую синхронизацию</strong> репозиториев</li>
@@ -629,9 +659,9 @@
                     <div class="challenge-icon">
                         <i class="fas fa-image"></i>
                     </div>
-                    <h3>Проблема: Ручная обработка изображений продуктов</h3>
+                    <h3 data-ru="Проблема: Ручная обработка изображений продуктов" data-en="Problem: Manual product image processing">Проблема: Ручная обработка изображений продуктов</h3>
                     <div class="challenge-problem">
-                        <h4>Что было:</h4>
+                        <h4 data-ru="Что было:" data-en="Before:">Что было:</h4>
                         <ul>
                             <li>Ручное редактирование каждого изображения в фотошопе</li>
                             <li>Непостоянное качество и размеры</li>
@@ -639,7 +669,7 @@
                         </ul>
                     </div>
                     <div class="challenge-solution">
-                        <h4>Решение:</h4>
+                        <h4 data-ru="Решение:" data-en="Solution:">Решение:</h4>
                         <ul>
                             <li><strong>Разработал Python модуль</strong> для автоматической обработки</li>
                             <li><strong>Функционал:</strong> сжатие, удаление фона, центрирование, масштабирование</li>
@@ -676,7 +706,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-cogs"></i> DevOps & CI/CD</h3>
+                    <h3><i class="fas fa-cogs"></i> <span data-ru="DevOps & CI/CD" data-en="DevOps & CI/CD">DevOps & CI/CD</span></h3>
                     <div class="skill-tags">
                         <span>Docker</span>
                         <span>Kubernetes</span>
@@ -866,7 +896,9 @@
             <h2 class="section-title" data-ru="Связаться со мной" data-en="Get in Touch">Связаться со мной</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <p class="contact-description">Активно ищу возможности в DevSecOps, DevOps, InfraSec, веб-разработке или любой области информационной безопасности. Предпочитаю удалённую работу.</p>
+                    <p class="contact-description" data-ru="Активно ищу возможности в DevSecOps, DevOps, InfraSec, веб-разработке или любой области информационной безопасности. Предпочитаю удалённую работу." data-en="Actively looking for roles in DevSecOps, DevOps, InfraSec, web development or any InfoSec-related area. Prefer remote work.">
+                        Активно ищу возможности в DevSecOps, DevOps, InfraSec, веб-разработке или любой области информационной безопасности. Предпочитаю удалённую работу.
+                    </p>
                     <div class="contact-methods">
                         <a href="mailto:vladarh11v@gmail.com" class="contact-method">
                             <i class="fas fa-envelope"></i>
@@ -882,14 +914,14 @@
                                 <p>+7 (911) 574-85-52</p>
                             </div>
                         </a>
-                        <a href="https://t.me/yourusername" target="_blank" class="contact-method">
+                        <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" class="contact-method">
                             <i class="fab fa-telegram"></i>
                             <div>
                                 <h4>Telegram</h4>
                                 <p>@yourusername</p>
                             </div>
                         </a>
-                        <a href="https://github.com/yourusername" target="_blank" class="contact-method">
+                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-method">
                             <i class="fab fa-github"></i>
                             <div>
                                 <h4>GitHub</h4>
@@ -901,7 +933,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Москва, Россия</span>
                         <span class="separator">•</span>
-                        <span>Готов к переезду и командировкам</span>
+                        <span data-ru="Готов к переезду и командировкам" data-en="Open to relocation and travel">Готов к переезду и командировкам</span>
                     </div>
                 </div>
             </div>
@@ -913,13 +945,13 @@
         <div class="container">
             <p>&copy; 2025 Владислав Рубцов. Все права защищены.</p>
             <div class="footer-links">
-                <a href="mailto:vladarh11v@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://t.me/yourusername" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="mailto:vladarh11v@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
             </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
