@@ -1,49 +1,76 @@
-stages: [build, deploy]
+name: Deploy to GitHub Pages
 
-variables:
-  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
-  NODE_ENV: "production"
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
-cache:
-  paths:
-    - .cache/pip
-    - apps/landing/node_modules/
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-build:docs:
-  stage: build
-  image: python:3.11
-  script:
-    - pip install -r requirements.txt
-    - mkdocs build --strict
-  artifacts:
-    paths:
-      - site/
-    expire_in: 1 week
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
-build:landing:
-  stage: build
-  image: node:20-alpine
-  before_script:
-    - cd apps/landing
-  script:
-    - npm ci
-    - npm run build
-  artifacts:
-    paths:
-      - apps/landing/dist/
-    expire_in: 1 week
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-pages:
-  stage: deploy
-  image: alpine:3.19
-  needs: ["build:docs", "build:landing"]
-  script:
-    - mkdir -p public
-    - cp -r apps/landing/dist/* public/
-    - mkdir -p public/docs
-    - cp -r site/* public/docs/
-  artifacts:
-    paths:
-      - public
-  only:
-    - main
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: apps/landing/package-lock.json
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build MkDocs documentation
+        run: |
+          mkdocs build --strict
+
+      - name: Install Node dependencies
+        working-directory: apps/landing
+        run: npm ci
+
+      - name: Build Astro landing
+        working-directory: apps/landing
+        run: npm run build
+
+      - name: Combine builds
+        run: |
+          mkdir -p _site
+          cp -r apps/landing/dist/* _site/
+          mkdir -p _site/docs
+          cp -r site/* _site/docs/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
