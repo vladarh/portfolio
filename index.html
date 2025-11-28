@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vladislav Rubtsov | DevSecOps Engineer</title>
+    <meta name="description" content="DevSecOps Engineer, Backend Developer specializing in security automation, container security, and CI/CD pipelines">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button onclick="switchLanguage('en')" class="lang-btn active" id="lang-en">EN</button>
+        <button onclick="switchLanguage('ru')" class="lang-btn" id="lang-ru">RU</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">VR</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link" data-en="Home" data-ru="Главная">Home</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-ru="О себе">About</a></li>
+                <li><a href="#experience" class="nav-link" data-en="Experience" data-ru="Опыт">Experience</a></li>
+                <li><a href="#skills" class="nav-link" data-en="Skills" data-ru="Навыки">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-en="Projects" data-ru="Проекты">Projects</a></li>
+                <li><a href="#blog" class="nav-link" data-en="Blog" data-ru="Блог">Blog</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-ru="Контакты">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span data-en="Hi, I'm" data-ru="Привет, я">Hi, I'm</span>
+                    <span class="gradient-text">Vladislav Rubtsov</span>
+                </h1>
+                <h2 class="hero-subtitle" data-en="DevSecOps Engineer & Security Automation Specialist" data-ru="DevSecOps Инженер и Специалист по Автоматизации Безопасности">
+                    DevSecOps Engineer & Security Automation Specialist
+                </h2>
+                <p class="hero-description" data-en="I build secure, automated infrastructure solutions and develop tools that bridge security and development. Specializing in container security, CI/CD pipelines, and compliance automation." data-ru="Создаю защищённые автоматизированные инфраструктурные решения и разрабатываю инструменты, объединяющие безопасность и разработку. Специализируюсь на безопасности контейнеров, CI/CD пайплайнах и автоматизации соответствия требованиям.">
+                    I build secure, automated infrastructure solutions and develop tools that bridge security and development. Specializing in container security, CI/CD pipelines, and compliance automation.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-en="View Projects" data-ru="Посмотреть проекты">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary" data-en="Get in Touch" data-ru="Связаться">Get in Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:vladarh11v@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://t.me/yourusername" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-en="About Me" data-ru="О себе">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-en="I'm a DevSecOps Engineer with a passion for security that started in school. From CTF competitions to building enterprise-grade automation tools, I've focused on making security seamless and scalable." data-ru="Я DevSecOps инженер с увлечением безопасностью, которое началось ещё в школе. От CTF соревнований до создания корпоративных инструментов автоматизации — я фокусируюсь на том, чтобы сделать безопасность бесшовной и масштабируемой.">
+                        I'm a DevSecOps Engineer with a passion for security that started in school. From CTF competitions to building enterprise-grade automation tools, I've focused on making security seamless and scalable.
+                    </p>
+                    <p data-en="Currently, I work on container security assessment, infrastructure automation, and compliance tooling. I've developed systems that reduce security assessment time by 50% and won multiple CTF competitions." data-ru="В настоящее время я работаю над оценкой безопасности контейнеров, автоматизацией инфраструктуры и инструментами соответствия требованиям. Я разработал системы, которые сокращают время оценки безопасности на 50%, и выигрывал в нескольких CTF соревнованиях.">
+                        Currently, I work on container security assessment, infrastructure automation, and compliance tooling. I've developed systems that reduce security assessment time by 50% and won multiple CTF competitions.
+                    </p>
+                    
+                    <div class="highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <h4 data-en="CTF Champion" data-ru="Чемпион CTF">CTF Champion</h4>
+                                <p data-en="1st place internal CTF, 2nd place finals" data-ru="1-е место внутреннее CTF, 2-е место финал">1st place internal CTF, 2nd place finals</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-robot"></i>
+                            <div>
+                                <h4 data-en="ML Innovation" data-ru="ML Инновации">ML Innovation</h4>
+                                <p data-en="3rd place at RNKT/KNTK with ML documentation automation" data-ru="3-е место на РНКТ/КНТК с ML автоматизацией документации">3rd place at RNKT/KNTK with ML documentation automation</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4 data-en="Security Focus" data-ru="Фокус на безопасность">Security Focus</h4>
+                                <p data-en="Pentesting, reverse engineering, cryptography since school" data-ru="Пентестинг, реверс-инжиниринг, криптография со школы">Pentesting, reverse engineering, cryptography since school</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-en="Work Experience" data-ru="Опыт работы">Work Experience</h2>
+            <div class="timeline">
+                <!-- Experience Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="Freelance Backend Developer" data-ru="Backend-разработчик (Фриланс)">Freelance Backend Developer</h3>
+                            <span class="timeline-date">Aug 2025 - Present</span>
+                        </div>
+                        <p class="company" data-en="Individual Entrepreneurship" data-ru="Индивидуальное предпринимательство">Individual Entrepreneurship</p>
+                        <ul class="achievements">
+                            <li data-en="Developed FastAPI backend for Android oil contract management app with POS terminal integration" data-ru="Разработал FastAPI backend для Android приложения управления нефтяными контрактами с интеграцией POS терминалов">Developed FastAPI backend for Android oil contract management app with POS terminal integration</li>
+                            <li data-en="Implemented healthcheck tests and Ansible CI/CD deployment pipeline" data-ru="Реализовал healthcheck тесты и Ansible CI/CD pipeline для деплоя">Implemented healthcheck tests and Ansible CI/CD deployment pipeline</li>
+                            <li data-en="Set up infrastructure: 2 Docker Compose containers (backend + PostgreSQL) with Caddy reverse proxy" data-ru="Настроил инфраструктуру: 2 Docker Compose контейнера (backend + PostgreSQL) с Caddy reverse proxy">Set up infrastructure: 2 Docker Compose containers (backend + PostgreSQL) with Caddy reverse proxy</li>
+                            <li data-en="Prepared comprehensive API documentation" data-ru="Подготовил полную документацию API">Prepared comprehensive API documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="Middle DevSecOps Engineer" data-ru="Middle DevSecOps Инженер">Middle DevSecOps Engineer</h3>
+                            <span class="timeline-date">Jul 2024 - Present</span>
+                        </div>
+                        <p class="company">SIBINTEK LLC</p>
+                        <ul class="achievements">
+                            <li data-en="Deployed and analyzed Luntry components, conducted security compliance testing" data-ru="Развернул и проанализировал компоненты Luntry, провёл тестирование соответствия требованиям безопасности">Deployed and analyzed Luntry components, conducted security compliance testing</li>
+                            <li data-en="Performed comparative analysis of Luntry vs NeuVector for container security, improving vulnerability detection efficiency" data-ru="Провёл сравнительный анализ Luntry vs NeuVector для безопасности контейнеров, повысив эффективность обнаружения уязвимостей">Performed comparative analysis of Luntry vs NeuVector for container security, improving vulnerability detection efficiency</li>
+                            <li data-en="Developed automated Helm chart migration tool with GitLab CI/CD pipeline supporting multi-source/target transfer (GitLab, Gitea, Nexus, Captain-chartMuseum)" data-ru="Разработал автоматизированный инструмент миграции Helm чартов с GitLab CI/CD pipeline, поддерживающий multi-source/target трансфер (GitLab, Gitea, Nexus, Captain-chartMuseum)">Developed automated Helm chart migration tool with GitLab CI/CD pipeline supporting multi-source/target transfer (GitLab, Gitea, Nexus, Captain-chartMuseum)</li>
+                            <li data-en="Modified Captain-chartMuseum source code to support repository listing via API and replaced provenance with cosign" data-ru="Модифицировал исходный код Captain-chartMuseum для поддержки получения списка репозиториев через API и заменил provenance на cosign">Modified Captain-chartMuseum source code to support repository listing via API and replaced provenance with cosign</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="DevOps Engineer" data-ru="DevOps Инженер">DevOps Engineer</h3>
+                            <span class="timeline-date">Apr 2024 - Present</span>
+                        </div>
+                        <p class="company">Bazarken</p>
+                        <ul class="achievements">
+                            <li data-en="Maintained Ansible CI/CD for backend and frontend deployment" data-ru="Поддерживал актуальность Ansible CI/CD для деплоя backend и frontend">Maintained Ansible CI/CD for backend and frontend deployment</li>
+                            <li data-en="Configured Selectel infrastructure: 2 servers + DB cluster" data-ru="Настроил инфраструктуру Selectel: 2 сервера + кластер БД">Configured Selectel infrastructure: 2 servers + DB cluster</li>
+                            <li data-en="Updated components for universal deployment from scratch, enabling both prod and stage environments" data-ru="Обновил компоненты для универсального деплоя с нуля, позволяя работать как с prod, так и со stage окружениями">Updated components for universal deployment from scratch, enabling both prod and stage environments</li>
+                            <li data-en="Updated monitoring stack: Grafana + Loki + Prometheus" data-ru="Обновил мониторинг: Grafana + Loki + Prometheus">Updated monitoring stack: Grafana + Loki + Prometheus</li>
+                            <li data-en="Created source code mirror for backup using Forgejo on Windows Server with WSL" data-ru="Создал зеркало исходного кода для бэкапа с Forgejo на Windows Server с WSL">Created source code mirror for backup using Forgejo on Windows Server with WSL</li>
+                            <li data-en="Developed Python functionality for image processing (compression, background removal, centering, scaling)" data-ru="Разработал Python функционал для обработки изображений (сжатие, удаление фона, центрирование, масштабирование)">Developed Python functionality for image processing (compression, background removal, centering, scaling)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="Principal Specialist - Compliance Automation" data-ru="Главный специалист - Автоматизация соответствия">Principal Specialist - Compliance Automation</h3>
+                            <span class="timeline-date">Jul 2023 - Jul 2024</span>
+                        </div>
+                        <p class="company">SIBINTEK LLC</p>
+                        <ul class="achievements">
+                            <li data-en="Initiated and solely developed automated compliance assessment tool, reducing assessment time by 50%" data-ru="Инициировал и единолично разработал инструмент автоматизации оценки соответствия, сократив время оценки на 50%">Initiated and solely developed automated compliance assessment tool, reducing assessment time by 50%</li>
+                            <li data-en="Built web application using Docker Compose: Django backend, Vue.js frontend (Bootstrap, Tailwind, Vite), Gitea for templates, Redis + Celery for task queues" data-ru="Создал веб-приложение с Docker Compose: Django backend, Vue.js frontend (Bootstrap, Tailwind, Vite), Gitea для шаблонов, Redis + Celery для очередей задач">Built web application using Docker Compose: Django backend, Vue.js frontend (Bootstrap, Tailwind, Vite), Gitea for templates, Redis + Celery for task queues</li>
+                            <li data-en="Developed Ansible playbooks for Linux (Astra 16/17, CentOS, PostgreSQL, MySQL) and Windows Server using bash/PowerShell scripts and WIN API binaries" data-ru="Разработал Ansible playbooks для Linux (Astra 16/17, CentOS, PostgreSQL, MySQL) и Windows Server с использованием bash/PowerShell скриптов и бинарников WIN API">Developed Ansible playbooks for Linux (Astra 16/17, CentOS, PostgreSQL, MySQL) and Windows Server using bash/PowerShell scripts and WIN API binaries</li>
+                            <li data-en="Created structured playbook system with parameterized checks, automated Excel report generation, and configuration exports" data-ru="Создал структурированную систему playbooks с параметризованными проверками, автогенерацией Excel отчётов и экспортом конфигураций">Created structured playbook system with parameterized checks, automated Excel report generation, and configuration exports</li>
+                            <li data-en="Implemented Ansible CI/CD for continuous integration and delivery of solution components (8 services total)" data-ru="Реализовал Ansible CI/CD для непрерывной интеграции и поставки компонентов решения (8 сервисов в сумме)">Implemented Ansible CI/CD for continuous integration and delivery of solution components (8 services total)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="Security Intern" data-ru="Стажёр отдела информационной безопасности">Security Intern</h3>
+                            <span class="timeline-date">Apr 2023</span>
+                        </div>
+                        <p class="company">Sigmalab LLC</p>
+                        <ul class="achievements">
+                            <li data-en="Conducted penetration testing and security assessment, identifying and exploiting vulnerabilities" data-ru="Провёл пентестинг и оценку безопасности, выявляя и эксплуатируя уязвимости">Conducted penetration testing and security assessment, identifying and exploiting vulnerabilities</li>
+                            <li data-en="Prepared comprehensive security report with findings and recommendations" data-ru="Подготовил подробный отчёт о безопасности с находками и рекомендациями">Prepared comprehensive security report with findings and recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-en="Skills & Technologies" data-ru="Навыки и технологии">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <!-- DevSecOps & Infrastructure -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> <span data-en="DevSecOps & Infrastructure" data-ru="DevSecOps и инфраструктура">DevSecOps & Infrastructure</span></h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Helm</span>
+                        <span class="skill-tag">Ansible</span>
+                        <span class="skill-tag">GitLab CI/CD</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Luntry</span>
+                        <span class="skill-tag">NeuVector</span>
+                        <span class="skill-tag">Harbor</span>
+                        <span class="skill-tag">Caddy</span>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> <span data-en="Backend Development" data-ru="Backend разработка">Backend Development</span></h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Celery</span>
+                        <span class="skill-tag">REST API</span>
+                    </div>
+                </div>
+
+                <!-- Security & Testing -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-bug"></i> <span data-en="Security & Testing" data-ru="Безопасность и тестирование">Security & Testing</span></h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Penetration Testing</span>
+                        <span class="skill-tag">Vulnerability Assessment</span>
+                        <span class="skill-tag">Reverse Engineering</span>
+                        <span class="skill-tag">CTF</span>
+                        <span class="skill-tag">Bug Bounty</span>
+                        <span class="skill-tag">Cryptography</span>
+                        <span class="skill-tag">Compliance Assessment</span>
+                    </div>
+                </div>
+
+                <!-- Frontend & Tools -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-palette"></i> <span data-en="Frontend & Tools" data-ru="Frontend и инструменты">Frontend & Tools</span></h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Vite</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Gitea</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Confluence</span>
+                    </div>
+                </div>
+
+                <!-- Systems & Automation -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> <span data-en="Systems & Automation" data-ru="Системы и автоматизация">Systems & Automation</span></h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Ubuntu</span>
+                        <span class="skill-tag">CentOS</span>
+                        <span class="skill-tag">Astra Linux</span>
+                        <span class="skill-tag">Windows Server</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">PowerShell</span>
+                        <span class="skill-tag">WSL</span>
+                    </div>
+                </div>
+
+                <!-- Monitoring & Observability -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> <span data-en="Monitoring & Observability" data-ru="Мониторинг и наблюдаемость">Monitoring & Observability</span></h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Grafana</span>
+                        <span class="skill-tag">Prometheus</span>
+                        <span class="skill-tag">Loki</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-en="Featured Projects" data-ru="Избранные проекты">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 data-en="ML Documentation Automation" data-ru="ML автоматизация документации">ML Documentation Automation</h3>
+                    <p data-en="Developed two ML pipelines: one for generating training datasets from technical documentation using master data and knowledge graphs, another for extracting data into vector databases. Reduces documentation processing time by 40 hours per project." data-ru="Разработал два ML конвейера: один для генерации обучающих датасетов из технической документации с использованием мастер-данных и графов знаний, другой для извлечения данных в векторные БД. Сокращает время обработки документации на 40 часов на проект.">
+                        Developed two ML pipelines: one for generating training datasets from technical documentation using master data and knowledge graphs, another for extracting data into vector databases. Reduces documentation processing time by 40 hours per project.
+                    </p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>ML</span>
+                        <span>NLP</span>
+                        <span>Vector DB</span>
+                    </div>
+                    <div class="project-achievement">
+                        <i class="fas fa-award"></i>
+                        <span data-en="3rd place at RNKT/KNTK Conference" data-ru="3-е место на конференции РНКТ/КНТК">3rd place at RNKT/KNTK Conference</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3 data-en="Automated Compliance Assessment Tool" data-ru="Инструмент автоматизации оценки соответствия">Automated Compliance Assessment Tool</h3>
+                    <p data-en="Full-stack web application for automated security compliance assessment. Supports Linux (Astra, CentOS, PostgreSQL, MySQL) and Windows Server. Includes Django backend, Vue.js frontend, Ansible automation, and reduces assessment time by 50%." data-ru="Полнофункциональное веб-приложение для автоматизированной оценки соответствия требованиям безопасности. Поддерживает Linux (Astra, CentOS, PostgreSQL, MySQL) и Windows Server. Включает Django backend, Vue.js frontend, Ansible автоматизацию и сокращает время оценки на 50%.">
+                        Full-stack web application for automated security compliance assessment. Supports Linux (Astra, CentOS, PostgreSQL, MySQL) and Windows Server. Includes Django backend, Vue.js frontend, Ansible automation, and reduces assessment time by 50%.
+                    </p>
+                    <div class="project-tags">
+                        <span>Django</span>
+                        <span>Vue.js</span>
+                        <span>Ansible</span>
+                        <span>Docker</span>
+                        <span>Redis</span>
+                        <span>Celery</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3 data-en="Helm Chart Migration Tool" data-ru="Инструмент миграции Helm чартов">Helm Chart Migration Tool</h3>
+                    <p data-en="GitLab CI/CD pipeline component for multi-source/target Helm chart transfer between GitLab, Gitea, Nexus, and Captain-chartMuseum. Modified Captain-chartMuseum source code to support API repository listing and replaced provenance with cosign." data-ru="Компонент GitLab CI/CD pipeline для multi-source/target трансфера Helm чартов между GitLab, Gitea, Nexus и Captain-chartMuseum. Модифицирован исходный код Captain-chartMuseum для поддержки получения списка репозиториев через API и замены provenance на cosign.">
+                        GitLab CI/CD pipeline component for multi-source/target Helm chart transfer between GitLab, Gitea, Nexus, and Captain-chartMuseum. Modified Captain-chartMuseum source code to support API repository listing and replaced provenance with cosign.
+                    </p>
+                    <div class="project-tags">
+                        <span>Helm</span>
+                        <span>GitLab CI</span>
+                        <span>Kubernetes</span>
+                        <span>Cosign</span>
+                        <span>Harbor</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <h3 data-en="Oil Contract Management Backend" data-ru="Backend управления нефтяными контрактами">Oil Contract Management Backend</h3>
+                    <p data-en="FastAPI backend for Android POS terminal application managing fuel dispensing for vehicles. Includes healthcheck tests, Ansible CI/CD deployment, Docker Compose infrastructure with PostgreSQL, and Caddy reverse proxy." data-ru="FastAPI backend для Android POS терминала, управляющего отпуском топлива на автомобили. Включает healthcheck тесты, Ansible CI/CD деплой, Docker Compose инфраструктуру с PostgreSQL и Caddy reverse proxy.">
+                        FastAPI backend for Android POS terminal application managing fuel dispensing for vehicles. Includes healthcheck tests, Ansible CI/CD deployment, Docker Compose infrastructure with PostgreSQL, and Caddy reverse proxy.
+                    </p>
+                    <div class="project-tags">
+                        <span>FastAPI</span>
+                        <span>PostgreSQL</span>
+                        <span>Docker</span>
+                        <span>Ansible</span>
+                        <span>Caddy</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-en="Container Security Analysis" data-ru="Анализ безопасности контейнеров">Container Security Analysis</h3>
+                    <p data-en="Comparative analysis and deployment of container security tools (Luntry vs NeuVector). Conducted security compliance testing and improved vulnerability detection efficiency in enterprise container platform." data-ru="Сравнительный анализ и развертывание инструментов безопасности контейнеров (Luntry vs NeuVector). Провёл тестирование соответствия требованиям безопасности и повысил эффективность обнаружения уязвимостей в корпоративной контейнерной платформе.">
+                        Comparative analysis and deployment of container security tools (Luntry vs NeuVector). Conducted security compliance testing and improved vulnerability detection efficiency in enterprise container platform.
+                    </p>
+                    <div class="project-tags">
+                        <span>Luntry</span>
+                        <span>NeuVector</span>
+                        <span>Kubernetes</span>
+                        <span>Security</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 data-en="Image Processing Module" data-ru="Модуль обработки изображений">Image Processing Module</h3>
+                    <p data-en="Python functionality for automated image processing including compression, background removal, centering, and scaling. Integrated into restaurant management system for product image optimization." data-ru="Python функционал для автоматизированной обработки изображений, включая сжатие, удаление фона, центрирование и масштабирование. Интегрирован в систему управления рестораном для оптимизации изображений продуктов.">
+                        Python functionality for automated image processing including compression, background removal, centering, and scaling. Integrated into restaurant management system for product image optimization.
+                    </p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Image Processing</span>
+                        <span>Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title" data-en="Blog & Insights" data-ru="Блог и аналитика">Blog & Insights</h2>
+            <div class="blog-placeholder">
+                <i class="fas fa-pen-fancy"></i>
+                <h3 data-en="Coming Soon" data-ru="Скоро">Coming Soon</h3>
+                <p data-en="I'm preparing articles on DevSecOps best practices, CTF writeups, and security automation. Stay tuned!" data-ru="Я готовлю статьи о лучших практиках DevSecOps, разборы CTF и автоматизацию безопасности. Следите за обновлениями!">
+                    I'm preparing articles on DevSecOps best practices, CTF writeups, and security automation. Stay tuned!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Get in Touch" data-ru="Свяжитесь со мной">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-description" data-en="I'm actively looking for opportunities in DevSecOps, DevOps, InfraSec, and web development. Prefer remote work. Let's connect!" data-ru="Активно ищу возможности в DevSecOps, DevOps, InfraSec и веб-разработке. Предпочитаю удалённую работу. Давайте свяжемся!">
+                        I'm actively looking for opportunities in DevSecOps, DevOps, InfraSec, and web development. Prefer remote work. Let's connect!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:vladarh11v@gmail.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>vladarh11v@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="tel:+79115748552" class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4 data-en="Phone" data-ru="Телефон">Phone</h4>
+                                <p>+7 (911) 574-85-52</p>
+                            </div>
+                        </a>
+                        <a href="https://t.me/yourusername" target="_blank" class="contact-method">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <h4>Telegram</h4>
+                                <p>@yourusername</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/yourusername" target="_blank" class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>github.com/yourusername</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-en="Moscow, Russia" data-ru="Москва, Россия">Moscow, Russia</span>
+                        <span class="separator">•</span>
+                        <span data-en="Open to relocation & business trips" data-ru="Готов к переезду и командировкам">Open to relocation & business trips</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Vladislav Rubtsov. <span data-en="All rights reserved." data-ru="Все права защищены.">All rights reserved.</span></p>
+            <div class="footer-links">
+                <a href="mailto:vladarh11v@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://t.me/yourusername" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
