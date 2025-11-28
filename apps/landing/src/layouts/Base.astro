@@ -1,0 +1,46 @@
+---
+const { title = "Владислав Рубцов — DevSecOps/DevOps", description = "DevSecOps/DevOps инженер и full‑stack разработчик: Ansible, GitLab CI, FastAPI, Django, Vue 3" } = Astro.props;
+---
+<html lang="ru" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#3b82f6" />
+    <title>{title}</title>
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og.png" />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body class="min-h-full bg-brand-gradient text-slate-800 antialiased">
+    <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b border-slate-200">
+      <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="font-extrabold text-xl bg-text-gradient bg-clip-text text-transparent">ВР</div>
+        <div class="flex items-center gap-4 text-sm">
+          <a href="/#stack" class="hover:text-primary">Стек</a>
+          <a href="/#builder" class="hover:text-primary">CI Builder</a>
+          <a href="/docs/" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary text-primary hover:bg-primary hover:text-white transition">
+            Документация
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="mt-16 border-t border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 py-8 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
+        <p>© {new Date().getFullYear()} Владислав Рубцов</p>
+        <div class="flex items-center gap-3">
+          <a class="hover:text-primary" href="mailto:vladarh11v@gmail.com">Email</a>
+          <a class="hover:text-primary" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="hover:text-primary" href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a class="hover:text-primary" href="/docs/">Документация</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

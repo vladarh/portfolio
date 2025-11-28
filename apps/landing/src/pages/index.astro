@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+import Stats from "../components/Stats.astro";
+import StackChips from "../components/StackChips.astro";
+import CiBuilder from "../components/CiBuilder.vue";
+---
+<Base>
+  <Hero />
+  <Stats />
+  <StackChips />
+  <CiBuilder client:visible />
+  <section class="py-12">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-4">
+      <a href="/docs/cases/compliance-automation/" class="rounded-xl border border-slate-200 bg-white p-5 hover:shadow-lg transition">
+        <div class="text-sm text-slate-500">Кейс</div>
+        <div class="text-lg font-bold">Автоматизация оценки соответствия</div>
+        <p class="text-slate-600 mt-2 text-sm">−50% времени, 2× throughput, 300+ часов экономии.</p>
+      </a>
+      <a href="/docs/cases/helm-migration/" class="rounded-xl border border-slate-200 bg-white p-5 hover:shadow-lg transition">
+        <div class="text-sm text-slate-500">Кейс</div>
+        <div class="text-lg font-bold">Миграция Helm‑чартов</div>
+        <p class="text-slate-600 mt-2 text-sm">Автоматизация multi‑source/target, подписи cosign.</p>
+      </a>
+      <a href="/docs/blueprints/gitlab-ci-templates/" class="rounded-xl border border-slate-200 bg-white p-5 hover:shadow-lg transition">
+        <div class="text-sm text-slate-500">Blueprint</div>
+        <div class="text-lg font-bold">GitLab CI шаблоны</div>
+        <p class="text-slate-600 mt-2 text-sm">Готовые include‑файлы для быстрых стартов.</p>
+      </a>
+    </div>
+  </section>
+</Base>
